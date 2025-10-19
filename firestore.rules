@@ -1,0 +1,66 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    
+    // ⚠️ للتطوير والتجربة فقط - قواعد مفتوحة مؤقتاً
+    // للإنتاج: يجب استخدام القواعد الآمنة في التعليقات أدناه
+    
+    // القراءة العامة - الكتابة مفتوحة للتطوير
+    match /properties/{property} {
+      allow read: if true;
+      allow write: if true; // ⚠️ خطر أمني - للتطوير فقط
+      // للإنتاج استخدم: allow write: if request.auth != null;
+    }
+    
+    match /projects/{project} {
+      allow read: if true;
+      allow write: if true; // ⚠️ خطر أمني - للتطوير فقط
+      // للإنتاج استخدم: allow write: if request.auth != null;
+    }
+    
+    match /blog/{article} {
+      allow read: if true;
+      allow write: if true; // ⚠️ خطر أمني - للتطوير فقط
+      // للإنتاج استخدم: allow write: if request.auth != null;
+    }
+    
+    match /contacts/{contact} {
+      allow read: if true; // ⚠️ للتطوير فقط
+      allow create: if true; // السماح للجميع بإرسال رسائل
+      allow update, delete: if true; // ⚠️ خطر أمني - للتطوير فقط
+      // للإنتاج استخدم:
+      // allow read, delete: if request.auth != null;
+    }
+  }
+}
+
+// ════════════════════════════════════════════════════════════════════════
+// قواعد الإنتاج الآمنة (بعد تفعيل Firebase Authentication)
+// ════════════════════════════════════════════════════════════════════════
+/*
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    
+    match /properties/{property} {
+      allow read: if true;
+      allow write: if request.auth != null;
+    }
+    
+    match /projects/{project} {
+      allow read: if true;
+      allow write: if request.auth != null;
+    }
+    
+    match /blog/{article} {
+      allow read: if true;
+      allow write: if request.auth != null;
+    }
+    
+    match /contacts/{contact} {
+      allow create: if true;
+      allow read, update, delete: if request.auth != null;
+    }
+  }
+}
+*/

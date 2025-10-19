@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لوحة التحكم - الإدارة</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/admin.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="admin-container">
+        <aside class="admin-sidebar">
+            <div class="admin-logo">
+                <h2>لوحة التحكم</h2>
+            </div>
+            <nav class="admin-nav">
+                <a href="#" class="admin-nav-link active" data-section="properties">
+                    <span>العقارات</span>
+                </a>
+                <a href="#" class="admin-nav-link" data-section="projects">
+                    <span>المشاريع</span>
+                </a>
+                <a href="#" class="admin-nav-link" data-section="blog">
+                    <span>المدونة</span>
+                </a>
+                <a href="#" class="admin-nav-link" data-section="contacts">
+                    <span>الرسائل</span>
+                </a>
+                <a href="#" id="logout-btn" class="admin-nav-link logout">
+                    <span>تسجيل الخروج</span>
+                </a>
+            </nav>
+        </aside>
+
+        <main class="admin-main">
+            <div id="properties-section" class="admin-section active">
+                <div class="section-header">
+                    <h1>إدارة العقارات</h1>
+                    <button id="add-property-btn" class="add-btn">إضافة عقار جديد</button>
+                </div>
+                <div id="properties-list" class="items-list">
+                    <div class="loading">جاري التحميل...</div>
+                </div>
+            </div>
+
+            <div id="projects-section" class="admin-section">
+                <div class="section-header">
+                    <h1>إدارة المشاريع</h1>
+                    <button id="add-project-btn" class="add-btn">إضافة مشروع جديد</button>
+                </div>
+                <div id="projects-list" class="items-list">
+                    <div class="loading">جاري التحميل...</div>
+                </div>
+            </div>
+
+            <div id="blog-section" class="admin-section">
+                <div class="section-header">
+                    <h1>إدارة المدونة</h1>
+                    <button id="add-article-btn" class="add-btn">إضافة مقالة جديدة</button>
+                </div>
+                <div id="blog-list" class="items-list">
+                    <div class="loading">جاري التحميل...</div>
+                </div>
+            </div>
+
+            <div id="contacts-section" class="admin-section">
+                <div class="section-header">
+                    <h1>رسائل الاتصال</h1>
+                </div>
+                <div id="contacts-list" class="items-list">
+                    <div class="loading">جاري التحميل...</div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="modal-body"></div>
+        </div>
+    </div>
+
+    <script type="module" src="../js/firebase-config.js"></script>
+    <script type="module" src="../js/admin-dashboard.js"></script>
+</body>
+</html>

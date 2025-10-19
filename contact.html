@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اتصل بنا - موقع العقارات</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/details.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">
+                    <h1>العقارات المميزة</h1>
+                </div>
+                <button class="mobile-menu-toggle" aria-label="القائمة">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-links">
+                    <li><a href="../index.html">الرئيسية</a></li>
+                    <li><a href="properties.html">العقارات</a></li>
+                    <li><a href="projects.html">المشاريع</a></li>
+                    <li><a href="blog.html">المدونة</a></li>
+                    <li><a href="about.html">من نحن</a></li>
+                    <li><a href="contact.html" class="active">اتصل بنا</a></li>
+                    <li><a href="../admin/login.html" class="admin-link">لوحة التحكم</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>اتصل بنا</h1>
+            <p>نسعد بتواصلك معنا</p>
+        </div>
+    </section>
+
+    <section class="contact-section-page">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h2>معلومات التواصل</h2>
+                    <div class="contact-item">
+                        <h3>العنوان</h3>
+                        <p>المملكة العربية السعودية</p>
+                    </div>
+                    <div class="contact-item">
+                        <h3>الهاتف</h3>
+                        <p>+966 XX XXX XXXX</p>
+                    </div>
+                    <div class="contact-item">
+                        <h3>البريد الإلكتروني</h3>
+                        <p>info@realestate.com</p>
+                    </div>
+                    <div class="contact-item">
+                        <h3>ساعات العمل</h3>
+                        <p>السبت - الخميس: 9:00 صباحاً - 6:00 مساءً</p>
+                        <p>الجمعة: مغلق</p>
+                    </div>
+                </div>
+                
+                <div class="contact-form-container">
+                    <h2>أرسل لنا رسالة</h2>
+                    <form id="contact-form" class="contact-form">
+                        <div class="form-group">
+                            <label for="name">الاسم</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">البريد الإلكتروني</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">رقم الهاتف</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">الموضوع</label>
+                            <input type="text" id="subject" name="subject" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">الرسالة</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">إرسال</button>
+                        <div id="form-message" class="form-message"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>العقارات المميزة</h3>
+                    <p>نقدم لكم أفضل الحلول العقارية والمشاريع الاستثمارية الموثوقة</p>
+                </div>
+                <div class="footer-section">
+                    <h3>روابط سريعة</h3>
+                    <ul>
+                        <li><a href="properties.html">العقارات</a></li>
+                        <li><a href="projects.html">المشاريع</a></li>
+                        <li><a href="blog.html">المدونة</a></li>
+                        <li><a href="about.html">من نحن</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>تواصل معنا</h3>
+                    <ul>
+                        <li>البريد الإلكتروني: info@realestate.com</li>
+                        <li>الهاتف: +966 XX XXX XXXX</li>
+                        <li><a href="contact.html">نموذج الاتصال</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 جميع الحقوق محفوظة - العقارات المميزة</p>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="../js/firebase-config.js"></script>
+    <script type="module" src="../js/contact.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+</html>
